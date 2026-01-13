@@ -7,7 +7,7 @@ TOKEN = os.getenv("TELEGRAM_TOKEN")
 def start(update: Update, context):
     update.message.reply_text("🤖 Bot is working!")
 
-updater = Updater(TOKEN, use_context=True)
+updater = Updater(TOKEN)
 dp = updater.dispatcher
 
 dp.add_handler(CommandHandler("start", start))
